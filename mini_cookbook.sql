@@ -46,15 +46,15 @@ VALUES
 (3, 5, '1/2 cup'),  --  quesadillas needs butter 
 (3, 9, '3 cup'); --  quesadillas needs cheese
 
--- list recipes w/ their ingredients 
+-- An Example thats lists recipes w/ their ingredients 
 SELECT r.recipe_name, i.ingredient_name, ri.quantity
 FROM recipes r
 JOIN recipe_ingredients ri ON r.recipe_id = ri.recipe_id
 JOIN ingredients i ON ri.ingredient_id = i.ingredient_id;
 
--- finds all recipes that uses a specific ingredient
+-- An example that filters all recipes that use a specific ingredient
 SELECT DISTINCT r.recipe_name
 FROM recipes r
 JOIN recipe_ingredients ri ON r.recipe_id = ri.recipe_id
 JOIN ingredients i ON ri.ingredient_id = i.ingredient_id
-WHERE i.ingredient_name = 'salt';
+WHERE i.ingredient_name = 'cheese';
