@@ -52,7 +52,7 @@ FROM recipes r
 JOIN recipe_ingredients ri ON r.recipe_id = ri.recipe_id
 JOIN ingredients i ON ri.ingredient_id = i.ingredient_id;
 
--- An example that filters all recipes that use a specific ingredient
+-- An example that filters all recipes that use a specific ingredient like cheese
 SELECT DISTINCT r.recipe_name
 FROM recipes r
 JOIN recipe_ingredients ri ON r.recipe_id = ri.recipe_id
